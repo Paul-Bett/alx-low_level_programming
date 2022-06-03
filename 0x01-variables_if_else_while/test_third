@@ -18,18 +18,19 @@ int main(void)
 			{
 				for (R2 = num2 ; R2 < 10 + '0'; R2++)
 				{
-					if (!(num1 == R1 && num2 == R2))
+					if (num1 == (9 + '0') && num2 == (8 + '0') || (num1 == R1 && num2 == R2))
+					{
+						;
+					}
+					else
 					{
 						putchar(num1);
 						putchar(num2);
 						putchar(' ');
 						putchar(R1);
 						putchar(R2);
-					if (!(num1 == (9 + '0') && num2 == (8 + '0')))
-					{
 						putchar(',');
 						putchar(' ');
-					}
 					}
 				}
 			}
