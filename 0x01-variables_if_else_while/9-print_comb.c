@@ -8,21 +8,15 @@
 int main(void)
 {
 	int num1 = ((char)'0');
-	int num2, i, j;
+	int i;
 
 	for (i = 0; i < 10; i++)
 	{
-		num2 = ((char)'0');
-		for (j = 0; j < 10; j++)
-		{
-			putchar(num1);
-			putchar(num2);
-			putchar(',');
-			putchar(' ');
-			num2++;
-		}
+		putchar(num1);
+		putchar(',');
+		putchar(' ');
 		num1++;
-		j = 0;
 	}
+	putchar('\n');
 	return (0);
 }
