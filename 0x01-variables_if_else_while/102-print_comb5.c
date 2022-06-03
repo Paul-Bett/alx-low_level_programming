@@ -24,7 +24,7 @@ int main(void)
 					putchar(' ');
 					putchar(R1);
 					putchar(R2);
-					if (num1 == (9 + '0') && num2 == (9 + '0'))
+					if (num1 == (9 + '0') && num2 == (8 + '0'))
 					{
 						;
 					}
@@ -35,7 +35,6 @@ int main(void)
 					}
 				}
 			}
-			num2++;
 		}
 	}
 	putchar('\n');
