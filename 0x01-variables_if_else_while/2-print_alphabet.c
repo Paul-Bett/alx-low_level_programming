@@ -2,7 +2,7 @@
 
 /**
 *main - Begin Here
-*print a-z using putchar only. 
+*print a-z using putchar
 *Return: Value 0 (true)
 */
 int main(void)
