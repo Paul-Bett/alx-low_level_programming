@@ -2,12 +2,12 @@
 
 /**
 *main - Begin Here
-*print 0-9 using putchar
+*
 *Return: Value 0 (true)
 */
 int main(void)
 {
-	int num1, num2; 
+	int num1, num2;
 
 	for (num1 = 0 + '0' ; num1 < 10 + '0'; num1++)
 	{
