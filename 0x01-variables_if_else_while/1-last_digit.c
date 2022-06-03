@@ -19,7 +19,7 @@ int main(void)
 	if (n >= 0)
 		last = n % 10;
 	else if (n < 0)
-		last = (n % 10) * -1;
+		last = (n % 10);
 
 	if (last < 6 && last > 0)
 	{
