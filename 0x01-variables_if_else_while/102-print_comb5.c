@@ -35,6 +35,7 @@ int main(void)
 					}
 				}
 			}
+			num2++;
 		}
 	}
 	putchar('\n');
