@@ -18,7 +18,7 @@ int main(void)
 				putchar(num1);
 				putchar(num2);
 				putchar(num3);
-				if ( num1 >= (7 + '0'))
+				if (num1 >= (7 + '0'))
 				{
 					;
 				}
