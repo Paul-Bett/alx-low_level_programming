@@ -22,6 +22,10 @@ int main(void)
 					{
 						;
 					}
+					else if (num1 == R1 && num2 == R2)
+					{
+						;
+					}
 					else
 					{
 						putchar(num1);
@@ -29,15 +33,15 @@ int main(void)
 						putchar(' ');
 						putchar(R1);
 						putchar(R2);
-					}
-					if (num1 == (9 + '0') && num2 == (8 + '0'))
-					{
-						;
-					}
-					else
-					{
-						putchar(',');
-						putchar(' ');
+						if (num1 == (9 + '0') && num2 == (8 + '0'))
+						{
+							;
+						}
+						else
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 			}
