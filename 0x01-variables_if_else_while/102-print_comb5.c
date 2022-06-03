@@ -14,27 +14,24 @@ int main(void)
 	{
 		for (num2 = 0 + '0'; num2 < 10 + '0'; num2++)
 		{
-			R1=num1;
-//			for  (R1 = num1 ;R1 < 10 + '0'; R1++)
-//			{
-				for (R2 = num2 ;R2 < 10 + '0'; R2++)
+		R1=num1;
+			for (R2 = num2 ;R2 < 10 + '0'; R2++)
+			{
+				putchar(R1);
+				putchar(num2);
+				putchar(' ');
+				putchar(R1);
+				putchar(R2);
+				if (num1 == (9 + '0') && num2 == (9 + '0'))
 				{
-					putchar(num1);
-					putchar(num2);
-					putchar(' ');
-					putchar(R1);
-					putchar(R2);
-					if (num1 == (9 + '0') && num2 == (9 + '0'))
-					{
-						;
-					}
-					else
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					;
 				}
-//			}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
 	putchar('\n');
