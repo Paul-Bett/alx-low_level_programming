@@ -16,7 +16,7 @@ int main(void)
 			R1 = num1;
 			for  (R1 = num1 ; R1 < 10 + '0'; R1++)
 			{
-				for (R2 = num2 + 1 ; R2 < 10 + '0'; R2++)
+				for (R2 = num2; R2 < 10 + '0'; R2++)
 				{
 					if (!(num1 == R1 && num2 == R2))
 					{
