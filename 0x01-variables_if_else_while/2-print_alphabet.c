@@ -5,7 +5,6 @@
 *print a-z using putchar only. 
 *Return: Value 0 (true)
 */
-
 int main(void)
 {
 	char ch = 'a';
@@ -15,6 +14,5 @@ int main(void)
 		putchar(ch);
 		ch++;
 	}
-
 	putchar('\n');
 }
