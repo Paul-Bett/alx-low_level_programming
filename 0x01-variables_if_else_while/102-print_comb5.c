@@ -7,31 +7,24 @@
 */
 int main(void)
 {
-	int num1, num2, R1, R2;
+	int num1, num2;
 
-	for (num1 = 0 + '0' ; num1 < 10 + '0'; num1++)
+	for (num1 = 0; num1 <= 99; num1++)
 	{
-		for (num2 = 0 + '0'; num2 < 10 + '0'; num2++)
+		for (num2 = num1; num2 <= 99; num2++)
 		{
-			R1 = num1;
-			for  (R1 = num1 ; R1 < 10 + '0'; R1++)
+			if (!(num1 == num2))
 			{
-				for (R2 = num2; R2 < 10 + '0'; R2++)
-				{
-					if (!(num1 == R1 && num2 == R2))
-					{
-						putchar(num1);
-						putchar(num2);
-						putchar(' ');
-						putchar(R1);
-						putchar(R2);
-					if (!(num1 == (9 + '0') && num2 == (8 + '0')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					}
-				}
+				putchar(num1 / 10 + '0');
+				putchar(num1 % 10 + '0');
+				putchar(' ');
+				putchar(num2 / 10 + '0');
+				putchar(num2 % 10 + '0');
+			if (!(num1 == (98) && num2 == (99)))
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			}
 		}
 	}
