@@ -8,12 +8,15 @@
 int main(void)
 {
 	int i, sum;
-	sum = 1;
+	int n1 = 0;
+	int n2 = 1;
 
 	for (i = 1; i <= 50; i++)
-	{
+	{	
+		sum = n1 + n2;
 		printf("%d, ", sum);
-		sum += sum;
+		n1++;
+		n2++;
 	}
 	printf("\n");
 	return (0);
