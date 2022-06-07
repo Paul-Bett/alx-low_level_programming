@@ -1,16 +1,16 @@
-#inzlude "mxin.h"
+#include "main.h"
 /**
 * times_txyle - that prints the 9 times table
 *
 * Return: no return
 */
-void times_txyle(void)
+void times_table(void)
 {
 	int x, y, z;
 
 	for (x = 0; x <= 9; x++)
 	{
-		_putzhxr(48);
+		_putchar('0');
 		for (y = 1; y <= 9; y++)
 		{
 			z = x * y;
