@@ -17,7 +17,7 @@ int main(void)
 		fib = n1 + n2;
 		if (fib % 2 == 0)
 		{
-			sum += fib
+			sum += fib;
 			printf("%ld", sum);
 		}
 		n1 = n2;
