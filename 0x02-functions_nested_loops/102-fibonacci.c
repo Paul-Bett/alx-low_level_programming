@@ -13,11 +13,13 @@ int main(void)
 	long int n2 = 1;
 
 	for (i = 1; i <= 50; i++)
-	{	
+	{
 		sum = n1 + n2;
-		printf("%ld, ", sum);
+		printf("%ld", sum);
 		n1 = n2;
 		n2 = sum;
+		if (i < 50)
+			printf(", ");
 	}
 	printf("\n");
 	return (0);
