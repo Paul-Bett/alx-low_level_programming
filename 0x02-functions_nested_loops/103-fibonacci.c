@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-	long int fib =0;
+	long int fib = 0;
 	long int n1 = 0;
 	long int n2 = 1;
 	long int sum;
@@ -21,7 +21,7 @@ int main(void)
 			printf("%ld", sum);
 		}
 		n1 = n2;
-		n2 = sum;
+		n2 = fib;
 	}
 	printf("\n");
 	return (0);
