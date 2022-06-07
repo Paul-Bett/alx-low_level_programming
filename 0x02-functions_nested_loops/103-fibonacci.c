@@ -12,7 +12,7 @@ int main(void)
 	long int n2 = 1;
 	long int sum;
 
-	while (fib <= 4000000)
+	while (sum <= 4000000)
 	{
 		fib = n1 + n2;
 		if (fib % 2 == 0)
