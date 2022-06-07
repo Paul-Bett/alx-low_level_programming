@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*_print_sign - Begin Here
+*print_sign - Begin Here
 *@n: integer value
 *return 1 if lower case and 0 otherwise
 *Return: Value 0 (true)
