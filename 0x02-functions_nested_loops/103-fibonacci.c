@@ -7,7 +7,6 @@
 */
 int main(void)
 {
-	int i;
 	long int sum =0;
 	long int n1 = 0;
 	long int n2 = 1;
@@ -17,7 +16,7 @@ int main(void)
 		sum = n1 + n2;
 		if (sum % 2 == 0)
 		{
-			pringf("%ld", sum);
+			printf("%ld", sum);
 			if (sum < 4000000)
 				printf(", "); 
 		}
