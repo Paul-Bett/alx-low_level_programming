@@ -7,18 +7,18 @@
 */
 int main(void)
 {
-	long int sum =0;
+	long int fib =0;
 	long int n1 = 0;
 	long int n2 = 1;
+	long int sum;
 
-	while (sum <= 4000000)
+	while (fib <= 4000000)
 	{
-		sum = n1 + n2;
-		if (sum % 2 == 0)
+		fib = n1 + n2;
+		if (fib % 2 == 0)
 		{
+			sum += fib
 			printf("%ld", sum);
-			if (sum < 4000000)
-				printf(", "); 
 		}
 		n1 = n2;
 		n2 = sum;
