@@ -12,7 +12,7 @@ int main(void)
 
 	for (i=0; i < 8; i++)
 	{
-		_putchar(test[i];
+		_putchar(tesx[i]);
 	}
 	_putchar('\n');
 	return (0);
