@@ -7,9 +7,10 @@
 */
 int main(void)
 {
-	int i, sum;
-	int n1 = 0;
-	int n2 = 1;
+	int i;
+	long int sum;
+	long int n1 = 0;
+	long int n2 = 1;
 
 	for (i = 1; i <= 50; i++)
 	{	
