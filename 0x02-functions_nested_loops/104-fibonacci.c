@@ -1,25 +1,37 @@
 #include <stdio.h>
+#define LARGEST 10000000000
 /**
-* main - first 50 fibonacci numbers
-* multiplies of 3 or 5 and sum of the multiples
-*
-* Return: Always 0.
-*/
+ * main - main block
+ * Description: Find and print the first 98 fib numbers starting with 1 and 2.
+ * Numbers should be coma and space separated.
+ * Return: 0
+ */
 int main(void)
 {
-	int i;
-	unsigned long int sum;
-	unsigned long int n1 = 0;
-	unsigned long int n2 = 1;
+	unsigned long int fr1 = 0, bk1 = 1, fr2 = 0, bk2 = 2;
+	unsigned long int hold1, hold2, hold3;
+	int count;
 
-	for (i = 1; i <= 98; i++)
+	printf("%lu, %lu, ", bk1, bk2);
+	for (count = 2; count < 98; count++)
 	{
-		sum = n1 + n2;
-		printf("%lu", sum);
-		n1 = n2;
-		n2 = sum;
-		if (i < 98)
-			printf(", ");
+	if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
+	{
+		hold1 = (bk1 + bk2) / LARGEST;
+		hold2 = (bk1 + bk2) % LARGEST;
+		hold3 = fr1 + fr2 + hold1;
+		fr1 = fr2, fr2 = hold3;
+		bk1 = bk2, bk2 = hold2;
+		printf("%lu%010lu", fr2, bk2);
+	}
+	else
+	{
+		hold2 = bk1 + bk2;
+		bk1 = bk2, bk2 = hold2;
+		printf("%lu", bk2);
+	}
+	if (count != 97)
+		printf(", ");
 	}
 	printf("\n");
 	return (0);
