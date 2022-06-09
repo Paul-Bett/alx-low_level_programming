@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_numbers - print number 0-9
+* main - Fizz Buzz
 * Return: void
 */
 int main(void)
