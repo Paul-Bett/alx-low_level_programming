@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * print_square - print square
-* @n: Number of diagonal lines to be printed
+* @size: Number of diagonal lines to be printed
 * Return: void
 */
 void print_square(int size)
@@ -9,9 +9,9 @@ void print_square(int size)
 	int i;
 	int j;
 
-	for (i = 0; size > 0 && i <= size; i++)
+	for (i = 0; size > 0 && i < size; i++)
 	{
-		for (j = 0; j <= size; j++)
+		for (j = 0; j < size; j++)
 		{
 			_putchar('#');
 		}
