@@ -3,7 +3,7 @@
 * print_numbers - print number 0-9
 * Return: void
 */
-void print_numbers(void)
+int main(void)
 {
 	int i;
 
@@ -18,5 +18,6 @@ void print_numbers(void)
 		else
 			printf("%d ", i + '0');
 	}
-	_putchar('\n');
+	putchar('\n');
+	return (0);
 }
