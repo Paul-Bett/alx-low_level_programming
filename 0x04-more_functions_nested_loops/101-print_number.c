@@ -6,7 +6,7 @@
 */
 void print_number(int n)
 {
-	int ones, tens, hundreds, thousands, tenthous;
+	int ones, tens, hundreds, thousands;
 
 	if (n < 0)
 	{
