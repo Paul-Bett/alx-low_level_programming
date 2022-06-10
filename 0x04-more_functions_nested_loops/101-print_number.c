@@ -6,8 +6,6 @@
 */
 void print_number(int n)
 {
-	int ones, tens, hundreds, thousands;
-
 	if (n < 0)
 	{
 		_putchar('-');
