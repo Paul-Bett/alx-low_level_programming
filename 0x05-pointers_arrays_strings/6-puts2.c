@@ -1,15 +1,24 @@
 #include "main.h"
 /**
-* puts2 - Use pointer to change value in memory
-* @str: Pointer to string location
+* print_rev - Use pointer to change value in memory
+* @s: Pointer to string location
 *Return: Null/Void
 */
-void puts2(char *str)
+void print_rev(char *s)
 {
-	while (*str)
+	int i = 0;
+	int j = 0;
+
+	while (*s)
 	{
-		putchar(*str);
-		str +=2;
+	i++;
+	s++;
+	}
+	s -= i;
+	for (; i > 0; i--)
+	{
+		putchar(*s);
+		s += 2;
 	}
 	putchar('\n');
 }
