@@ -11,7 +11,7 @@ int main(void)
 	time_t t;
 
 	srand((unsigned) time(&t));
-	while (c < 10)
+	while (c < 15)
 	{
 		r = rand() % 126;
 		c++;
