@@ -6,19 +6,19 @@
 */
 void puts2(char *str)
 {
-	char *cp = *str;
+	char *cp = str;
 	int count;
 	int i;
 
-	while (*cp)
+	while (*str)
 	{
 		count++;
-		cp++;
+		str++;
 	}
 	for (i = 0; i < count - 1 ;)
 	{
-		putchar(*str);
-		str += 2;
+		putchar(*cp);
+		cp += 2;
 		i += 2;
 	}
 	putchar('\n');
