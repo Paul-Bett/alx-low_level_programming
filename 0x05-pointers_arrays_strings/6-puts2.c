@@ -4,27 +4,6 @@
 * @str: Pointer to string location
 *Return: Null/Void
 */
-void puts2(char *str)
-{
-	char *cp = str;
-	int count;
-	int i;
-
-	while (*cp != '\0')
-	{
-		count++;
-		cp++;
-	}
-	count--;
-	for (i = 0; i < count; i++)
-	{
-		if (i % 2 == 0)
-			putchar(*(str + i));
-	}
-	putchar('\n');
-}
-
-/*
 
 void puts2(char *str)
 {
@@ -46,4 +25,4 @@ void puts2(char *str)
 		}
 	}
 	_putchar('\n');
-}*/
+}
