@@ -25,5 +25,5 @@ void rev_string(char *s)
 	}
 	count = j;
 	for (j = 0; j < count; j++)
-		*(s+j) = rev[j];
+		*(s + j) = rev[j];
 }
