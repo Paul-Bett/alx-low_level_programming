@@ -22,6 +22,7 @@ void rev_string(char *s)
 		s--;
 		j++;
 	}
-	putchar('\n');
-	*s = *rev;
+	int count = j;
+	for (j = 0, j < count, j++)
+		*(s+j) = rev[j];
 }
