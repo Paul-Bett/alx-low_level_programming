@@ -1,15 +1,23 @@
 #include "main.h"
 /**
-* _puts - Use pointer to change value in memory
-* @str: Pointer to string location
+* rev_string - Use pointer to change value in memory
+* @s: Pointer to string location
 *Return: Null/Void
 */
-void _puts(char *str)
+void rev_string(char *s)
 {
-	while (*str)
+	int i = 0;
+
+	while (*s)
 	{
-		putchar(*str);
-		str++;
+	i++;
+	s++;
+	}
+	s--;
+	for (; i > 0; i--)
+	{
+		putchar(*s);
+		s--;
 	}
 	putchar('\n');
 }
