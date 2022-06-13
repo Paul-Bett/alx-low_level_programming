@@ -16,10 +16,11 @@ void puts2(char *str)
 		str++;
 	}
 	count--;
-	for (i = 1; i < count; i += 2)
+	for (i = 0; i < count; i++)
 	{
-		putchar(*cp);
-		cp += 2;
+		if (i % 2 == 0)
+			putchar(*cp);
+		cp ++ 2;
 	}
 	putchar('\n');
 }
