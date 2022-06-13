@@ -23,6 +23,7 @@ void rev_string(char *s)
 		s--;
 		j++;
 	}
+	s++;
 	count = j;
 	for (j = 0; j < count; j++)
 		*(s + j) = rev[j];
