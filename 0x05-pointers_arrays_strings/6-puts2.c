@@ -10,17 +10,16 @@ void puts2(char *str)
 	int count;
 	int i;
 
-	while (*str)
+	while (*cp)
 	{
 		count++;
-		str++;
+		cp++;
 	}
 	count--;
 	for (i = 0; i < count; i++)
 	{
 		if (i % 2 == 0)
-			putchar(*cp);
-		cp++;
+			putchar(*(str + i));
 	}
 	putchar('\n');
 }
