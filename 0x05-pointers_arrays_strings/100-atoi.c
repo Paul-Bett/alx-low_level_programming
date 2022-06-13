@@ -17,7 +17,7 @@ int _atoi(char *s)
 			sign *= -1;
 
 		if ((*(s + len) >= '0') && (*(s + len) <= '9'))
-i		{
+		{
 			if (size > 0)
 				m *= 10;
 			size++;
@@ -27,7 +27,7 @@ i		{
 
 	for (i = len - size; i < len; i++)
 	{
-		oi = oi + ((*(s + i) - 48) * m);
+		oi += ((*(s + i) - 48) * m);
 		m /= 10;
 	}
 	return (oi * sign);
