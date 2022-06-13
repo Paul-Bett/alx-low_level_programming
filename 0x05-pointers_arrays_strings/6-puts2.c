@@ -10,7 +10,7 @@ void puts2(char *str)
 	int count;
 	int i;
 
-	while (*cp)
+	while (*cp != '\0')
 	{
 		count++;
 		cp++;
@@ -23,3 +23,27 @@ void puts2(char *str)
 	}
 	putchar('\n');
 }
+
+/*
+
+void puts2(char *str)
+{
+	int len = 0;
+	char *y = str;
+	int z;
+
+	while (*y != '\0')
+	{
+		y++;
+		len++;
+	}
+	len--;
+	for (z = 0 ; z <= len ; z++)
+	{
+		if (z % 2 == 0)
+		{
+			_putchar(str[z]);
+		}
+	}
+	_putchar('\n');
+}*/
