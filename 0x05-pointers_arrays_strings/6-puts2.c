@@ -20,7 +20,7 @@ void puts2(char *str)
 	{
 		if (i % 2 == 0)
 			putchar(*cp);
-		cp ++ 2;
+		cp++;
 	}
 	putchar('\n');
 }
