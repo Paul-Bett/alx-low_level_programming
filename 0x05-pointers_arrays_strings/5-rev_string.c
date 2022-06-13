@@ -23,5 +23,5 @@ void rev_string(char *s)
 		j++;
 	}
 	putchar('\n');
-	s = rev;
+	*s = rev;
 }
