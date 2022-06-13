@@ -8,6 +8,7 @@ void _puts(char *str)
 {
 	char *cp = str;
 	int count;
+	int i;
 
 	while (*cp)
 	{
