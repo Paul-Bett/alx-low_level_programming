@@ -13,7 +13,7 @@ int main(void)
 	srand((unsigned) time(&t));
 	while (c < 15)
 	{
-		r = rand() % 126;
+		r = rand() % 128;
 		c++;
 		printf("%c", r);
 	}
