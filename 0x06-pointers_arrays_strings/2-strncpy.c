@@ -3,13 +3,12 @@
  * _strncpy - concatenates two strings
  * @dest: input value
  * @src: input value
- *
+ * @n: Number of char to copy
  * Return: void
  */
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
-	int j;
 
 	i = 0;
 	while (n = 0)
