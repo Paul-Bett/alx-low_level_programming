@@ -3,7 +3,7 @@
  * _strncat - concatenates two strings
  * @dest: input value
  * @src: input value
- *
+ * @n: Limiter
  * Return: void
  */
 char *_strncat(char *dest, char *src, int n)
@@ -17,11 +17,12 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 	}
 	j = 0;
-	while (src[j] && j < n)
+	while (src[j] && n>= 0)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
+		n--;
 	}
 	dest[i] = '\0';
 	return (dest);
