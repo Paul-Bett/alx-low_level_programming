@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * cap_string - Perform word Case
- * @n: pointer
+ * cap_string - capitalizes all words of a string
+ * @n: input value
  *
- * Return: n
+ * Return: string
  */
 char *cap_string(char *n)
 {
@@ -11,15 +11,33 @@ char *cap_string(char *n)
 
 	i = 0;
 	if (n[0] >= 'a' && n[0] <= 'z')
+	{
 		n[0] += ('A' - 'a');
+	}
+	i = 0;
 	while (n[i])
 	{
-		if (n[i] == ' ' || n[i] == '\n')
+		switch (n[i])
 		{
-		i++;
-			if (n[i] >= 'a' && n[i] <= 'z')
-				n[i] += ('A' - 'a');
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+			case ' ':
+			case '\n':
+			case '\t':
+				if (n[i + 1] >= 'a' && n[i + 1] <= 'z')
+				{
+					n[i + 1] += ('A' - 'a');
+				}
 		}
+	i++;
 	}
 	return (n);
 }
