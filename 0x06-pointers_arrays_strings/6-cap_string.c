@@ -12,7 +12,7 @@ char *cap_string(char *n)
 	i = 0;
 	while (n[i])
 	{
-		if (n[i++] == ' ')
+		if (n[i] == ' ' || n[i] == '\n' || n[0])
 		{
 			if (n[i] >= 'a' && n[i] <= 'z')
 				n[i] += ('A' - 'a');
