@@ -29,5 +29,4 @@ void print_number(int n)
 		_putchar((n % mux) + '0'); 
 		mux /= 10;
 	}
-	return (dest);
 }
