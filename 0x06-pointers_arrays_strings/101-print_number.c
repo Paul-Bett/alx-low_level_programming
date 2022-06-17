@@ -1,4 +1,3 @@
-#include "main.h"
 #include <math.h>
 /**
  * print_number - Converts Integer to string
@@ -13,9 +12,9 @@ void print_number(int n)
 	int mux;
 	int out;
 
-	len =0;
+	len = 0;
 	i = n;
-	while (i/10 != 0)
+	while (i / 10 != 0)
 	{
 		len++;
 		i /= 10;
