@@ -1,31 +1,52 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * rot13 - encodes a string in rot13
- * @s: string to be encoded
- *
- * Return: the resulting string
+ * infinite_add -  adds two numbers
+ * @n1: first number
+ * @n2: second number
+ * @r: result
+ * @size_r: result lenght
+ * Return: sum
  */
-char *rot13(char *s)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j;
-	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-	i = 0;
-	while (s[i])
-	{
-	j = 0;
-		while (a[j])
-		{
-			if (s[i] == a[j])
-			{
-				s[i] = b[j];
-				break;
-			}
+	int i = 0, j = 0, k, l = 0, f, s, d = 0;
+	while (n1[i])
+		i++;
+	while (n2[j])
 		j++;
-		}
-	i++;
+	if (i > j)
+		l = i;
+	else
+		l = j;
+	if (l + 1 > size_r)
+		return (0);
+	r[l] = '\0';
+	for (k = l - 1 ; k >= 0 ; k--)
+	{
+		i--;
+		j--;
+		if (i >= 0)
+			f = n1[i] - '0';
+		else
+			f = 0;
+		if (j >= 0)
+			s = n2[j] - '0';
+		else
+			s = 0;
+		r[k] = (f + s + d) % 10 + '0';
+		d = (f + s + d) / 10;
 	}
-	return (s);
+	if (d == 1)
+	{
+		r[l + 1] = '\0';
+		if (l + 2 > size_r)
+			return (0);
+		while (l-- >= 0)
+			r[l + 1] = r[l];
+		r[0] = d + '0';
+	}
+	return (r);
 }
+
+
