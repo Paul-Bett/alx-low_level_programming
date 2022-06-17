@@ -1,27 +1,33 @@
 #include "main.h"
 /**
- * _strncpy - concatenates two strings
- * @dest: input value
- * @src: input value
- * @n: Number of char to copy
+ * print_number - Converts Integer to string
+ * @n: Input integer
  * Return: void
  */
-char *_strncpy(char *dest, char *src, int n)
+void print_number(int n);
 {
 	int i;
+	int len;
+	int j;
+	int mux;
 
-	i = 0;
-	while (n > 0 && src[i])
+	len =0;
+	i = n;
+	while (i/10 != 0)
 	{
-		dest[i] = src[i];
-		i++;
-		n--;
+		len++;
+		i /= 10;
 	}
-	while (n > 0)
+	mux = len * 10;
+	if (n < 0)
 	{
-		dest[i] = '\0';
-		i++;
-		n--;
+		_putchar('-');
+		n *= -1;
+	}
+	for (j = 0; j < len; j++)
+	{
+		_putchar((n % mux) + '0'); 
+		mux /= 10;
 	}
 	return (dest);
 }
