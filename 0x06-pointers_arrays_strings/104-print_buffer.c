@@ -1,31 +1,42 @@
 #include "main.h"
 
 /**
- * rot13 - encodes a string in rot13
- * @s: string to be encoded
- *
- * Return: the resulting string
+ * print_buffer - prints a buffer
+ * @b: buffer.
+ * @size: size of buffer.
+ * Return: no return.
  */
-char *rot13(char *s)
+void print_buffer(char *b, int size)
 {
-	int i, j;
-	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int j, k, l;
 
-	i = 0;
-	while (s[i])
+	if (size <= 0)
+		printf("\n");
+	else
 	{
-	j = 0;
-		while (a[j])
+		for (j = 0; j < size; j += 10)
 		{
-			if (s[i] == a[j])
+			printf("%.8x:", j);
+			for (k = j; k < j + 10; k++)
 			{
-				s[i] = b[j];
-				break;
+				if (k % 2 == 0)
+					printf(" ");
+				if (k < size)
+					printf("%.2x", *(b + k));
+				else
+					printf("  ");
 			}
-		j++;
+			printf(" ");
+			for (l = j; l < j + 10; l++)
+			{
+				if (l >= size)
+					break;
+				if (*(b + l) < 32 || *(b + l) > 126)
+					printf("%c", '.');
+				else
+					printf("%c", *(b + l));
+			}
+			printf("\n");
 		}
-	i++;
 	}
-	return (s);
-}
+} 
