@@ -33,7 +33,7 @@ void print_number(int n)
 			_putchar('-');
 			n *= -1;
 		}
-		for (j = 0; j < len; j++)
+		for (j = 0; j <= len; j++)
 		{
 			out = n / mux;
 			_putchar(out + '0');
