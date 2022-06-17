@@ -1,4 +1,4 @@
-#include <math.h>
+#include "main.h"
 /**
  * print_number - Converts Integer to string
  * @n: Input integer
