@@ -20,7 +20,7 @@ void print_number(int n)
 		i /= 10;
 	}
 	mux = 1;
-	for j = 0; j<= len; j++)
+	for (j = 0; j<= len; j++)
 		mux *= 10;
 	if (n < 0)
 	{
