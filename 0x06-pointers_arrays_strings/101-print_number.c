@@ -19,7 +19,9 @@ void print_number(int n)
 		len++;
 		i /= 10;
 	}
-	mux = pow(10, len);
+	mux = 1;
+	for j = 0; j<= len; j++)
+		mux *= 10;
 	if (n < 0)
 	{
 		_putchar('-');
