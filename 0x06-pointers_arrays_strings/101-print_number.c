@@ -13,25 +13,37 @@ void print_number(int n)
 	int out;
 
 	len = 0;
-	i = n;
-	while (i / 10 != 0)
-	{
-		len++;
-		i /= 10;
-	}
-	mux = 1;
-	for (j = 0; j <= len; j++)
-		mux *= 10;
 	if (n < 0)
 	{
 		_putchar('-');
 		n *= -1;
 	}
-	for (j = 0; j < len; j++)
+	i = n;
+	if (n < 10)
 	{
-		out = n / mux;
-		_putchar(out + '0');
-		n -= (mux * out);
-		mux /= 10;
+		_putchar(n + '0');
+	}
+	else
+	{
+		while (i / 10 != 0)
+		{
+			len++;
+			i /= 10;
+		}
+		mux = 1;
+		for (j = 0; j <= len; j++)
+			mux *= 10;
+		if (n < 0)
+		{
+			_putchar('-');
+			n *= -1;
+		}
+		for (j = 0; j < len; j++)
+		{
+			out = n / mux;
+			_putchar(out + '0');
+			n -= (mux * out);
+			mux /= 10;
+		}
 	}
 }
