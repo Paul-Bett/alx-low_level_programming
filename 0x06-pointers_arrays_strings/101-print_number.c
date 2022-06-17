@@ -19,9 +19,9 @@ void print_number(int n)
 		n *= -1;
 	}
 	i = n;
-	if (n < 0)
+	if (n == 0)
 	{
-		_putchar(n + '0');
+		_putchar('0');
 	}
 	else
 	{
@@ -31,7 +31,7 @@ void print_number(int n)
 			i /= 10;
 		}
 		mux = 1;
-		for (j = 0; j <= len; j++)
+		for (j = 1; j <= len; j++)
 			mux *= 10;
 		for (j = 0; j <= len; j++)
 		{
