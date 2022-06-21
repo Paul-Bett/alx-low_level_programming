@@ -14,5 +14,7 @@ int main(void)
 
     n = _strspn(s, f);
     printf("%u\n", n);
+	n = _strspn("First, solve the problem. Then, write the code.", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	printf("%u\n", n);
     return (0);
 }
