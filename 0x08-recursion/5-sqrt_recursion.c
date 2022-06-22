@@ -7,17 +7,19 @@
  */
 int sqrt_tracer(int n, int min, int max)
 {
-	if (max < min)
-		return (-1);
 	int guess = (min + max) / 2;
 	int guessans = guess * guess;
 
+	if (max < min)
+		return (-1);
 	if (guessans == n)
 		return (guess);
 	else if (guessans < n)
 		sqrt_tracer(n, guess + 1, max);
-	else
+	else if (guessans > 0)
 		sqrt_tracer(n, min, guess - 1);
+	else
+		return (-1);
 }
 
 /**
