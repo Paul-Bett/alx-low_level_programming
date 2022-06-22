@@ -1,38 +1,28 @@
 #include "main.h"
 /**
- * sqtChecker - computes square root recursively doing binary search
- * @min: inital number
- * @max: last number within the limit of number
- * @m: given number
- * Return: 1 if not found sqrroot, else sqrroot
+ * primenumber - checks if a given number is prime
+ * @n: given number
+ * @m: checker number
+ * Return: 1 if number is prime else 0
  **/
-int sqtChecker(int min, int max, int m)
+int primenumber(int n, int m)
 {
-	int guess;
-
-	if (max >= min)
-	{
-		guess = min + (max - min) / 2;
-		if (guess * mid == m)
-			return (guess);
-/* following binary search */
-		if (guess * mid > m)
-			return (sqtChecker(min, guess - 1, m));
-		if (guess * mid < m)
-			return (sqtChecker(guess + 1, max, m));
-	}
-	return (-1);
+	if (m == 0)
+		return 0;
+	if (m == 1)
+		return (1);
+	if (n % m == 0)
+		return (0);
+	primenumber(n, m - 1);
 }
 /**
- * _sqrt_recursion - finds the natural square root of a number
+ * is_prime_number - checks if a given number is prime
  * @n: given number
- * Return: square root of n or -1
+ * Return: 1 if number is prime else 0
  **/
-	int _sqrt_recursion(int n)
+int is_prime_number(int n)
 {
-	if (n < 0)
-		return (-1);
-	if (n == 0)
-		return (0);
-	return (sqtChecker(1, n, n));
+	if (n <= 0)
+		return(0);
+	return (primenumber(n, n / 2));
 }
