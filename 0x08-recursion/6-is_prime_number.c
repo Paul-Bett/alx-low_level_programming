@@ -13,7 +13,7 @@ int primenumber(int n, int m)
 		return (1);
 	if (n % m == 0)
 		return (0);
-	primenumber(n, m - 1);
+	return (primenumber(n, m - 1));
 }
 /**
  * is_prime_number - checks if a given number is prime
@@ -22,7 +22,7 @@ int primenumber(int n, int m)
  **/
 int is_prime_number(int n)
 {
-	if (n <= 0)
+	if (n <= 1)
 		return(0);
 	return (primenumber(n, n / 2));
 }
