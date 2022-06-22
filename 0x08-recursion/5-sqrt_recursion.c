@@ -1,38 +1,38 @@
+#include "main.h"
 /**
- * sqrt_tracer - Guess rangom numbers to get square root
- * @n: Integer Value
- * @min: Lower guess constraint
- * @max: Upper guess constraint
- * Return: Square root
- */
-int sqrt_tracer(int n, int min, int max)
+ * sqtChecker - computes square root recursively doing binary search
+ * @min: inital number
+ * @max: last number within the limit of number
+ * @m: given number
+ * Return: 1 if not found sqrroot, else sqrroot
+ **/
+int sqtChecker(int min, int max, int m)
 {
-	int guess = (min + max) / 2;
-	int guessans = guess * guess;
+	int guess;
 
 	if (max >= min)
 	{
-	if (guessans == n)
-		return (guess);
-	else if (guessans < n)
-		sqrt_tracer(n, guess + 1, max);
-	else
-		sqrt_tracer(n, min, guess - 1);
+		guess = min + (max - min) / 2;
+		if (guess * mid == m)
+			return (guess);
+/* following binary search */
+		if (guess * mid > m)
+			return (sqtChecker(min, guess - 1, m));
+		if (guess * mid < m)
+			return (sqtChecker(guess + 1, max, m));
 	}
-	else
-		return (-1);
+	return (-1);
 }
-
 /**
- * _sqrt_recursion - Performs square root of a number
- * @n: Integer Value
- * Return: Square root
- */
-int _sqrt_recursion(int n)
+ * _sqrt_recursion - finds the natural square root of a number
+ * @n: given number
+ * Return: square root of n or -1
+ **/
+	int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	else if (n == 0)
+	if (n == 0)
 		return (0);
-	return (sqrt_tracer(n, 1, n));
+	return (sqtChecker(1, n, n));
 }
