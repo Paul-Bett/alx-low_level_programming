@@ -13,12 +13,12 @@ int sqtChecker(int min, int max, int m)
 	if (max >= min)
 	{
 		guess = min + (max - min) / 2;
-		if (guess * mid == m)
+		if (guess * guess == m)
 			return (guess);
 /* following binary search */
-		if (guess * mid > m)
+		if (guess * guess > m)
 			return (sqtChecker(min, guess - 1, m));
-		if (guess * mid < m)
+		if (guess * guess < m)
 			return (sqtChecker(guess + 1, max, m));
 	}
 	return (-1);
