@@ -7,8 +7,6 @@
  **/
 int primenumber(int n, int m)
 {
-	if (m == 0)
-		return 0;
 	if (m == 1)
 		return (1);
 	if (n % m == 0)
@@ -23,6 +21,6 @@ int primenumber(int n, int m)
 int is_prime_number(int n)
 {
 	if (n <= 1)
-		return(0);
+		return (0);
 	return (primenumber(n, n / 2));
 }
