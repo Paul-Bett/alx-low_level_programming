@@ -8,7 +8,7 @@
  **/
 int sqtChecker(int min, int max, int m)
 {
-	unsigned int guess;
+	long int guess;
 
 	if (max >= min)
 	{
