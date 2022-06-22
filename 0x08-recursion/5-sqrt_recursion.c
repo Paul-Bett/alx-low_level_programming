@@ -12,14 +12,15 @@ int sqrt_tracer(int n, int min, int max)
 
 	if (max < min)
 		return (-1);
+	else
+	{
 	if (guessans == n)
 		return (guess);
 	else if (guessans < n)
 		sqrt_tracer(n, guess + 1, max);
-	else if (guessans > 0)
-		sqrt_tracer(n, min, guess - 1);
 	else
-		return (-1);
+		sqrt_tracer(n, min, guess - 1);
+	}
 }
 
 /**
