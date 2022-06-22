@@ -10,9 +10,7 @@ int sqrt_tracer(int n, int min, int max)
 	int guess = (min + max) / 2;
 	int guessans = guess * guess;
 
-	if (max < min)
-		return (-1);
-	else
+	if (max >= min)
 	{
 	if (guessans == n)
 		return (guess);
@@ -21,6 +19,8 @@ int sqrt_tracer(int n, int min, int max)
 	else
 		sqrt_tracer(n, min, guess - 1);
 	}
+	else
+		return (-1);
 }
 
 /**
@@ -30,5 +30,9 @@ int sqrt_tracer(int n, int min, int max)
  */
 int _sqrt_recursion(int n)
 {
+	if (n < 0)
+		return (-1);
+	else if (n == 0)
+		return (0);
 	return (sqrt_tracer(n, 1, n));
 }
