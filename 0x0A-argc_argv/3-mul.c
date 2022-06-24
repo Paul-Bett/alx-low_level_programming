@@ -8,6 +8,9 @@
 **/
 int main(int argc, char *argv[])
 {
-	printf("%d\n", (atoi(argv[argc - 1]) * atoi(argv[argc - 2])));
+	if (argc == 1)
+		printf("%s\n", Error);
+	else
+		printf("%d\n", (atoi(argv[argc - 1]) * atoi(argv[argc - 2])));
 	return (0);
 }
