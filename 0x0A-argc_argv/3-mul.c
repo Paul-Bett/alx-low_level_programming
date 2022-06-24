@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	if (argc == 1)
-		printf("%s\n", Error);
+		printf("%s\n", "Error");
 	else
 		printf("%d\n", (atoi(argv[argc - 1]) * atoi(argv[argc - 2])));
 	return (0);
