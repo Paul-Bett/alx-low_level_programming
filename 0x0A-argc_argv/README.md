@@ -67,6 +67,7 @@ julien@ubuntu:~/0x0A. argc, argv$ ./mul
 Error
 julien@ubuntu:~/0x0A. argc, argv$
 
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 4. To infinity and beyond
