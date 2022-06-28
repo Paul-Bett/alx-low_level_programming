@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * artstostr - Concatenate all arguements
+ * argstostr - Concatenate all arguements
  * @ac: Number of arguements
  * @av: Pointer to string arguements
  * Return: Pointer to new string
