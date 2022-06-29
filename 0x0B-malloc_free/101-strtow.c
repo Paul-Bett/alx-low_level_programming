@@ -27,6 +27,7 @@ char **strtow(char *str)
 		return(NULL);
 	}
 	len = 0; 
+	i = 0;
 	while (str[len++])
 	{
 		if (str[len-1] != ' ' && str[len] != ' ')
@@ -34,8 +35,9 @@ char **strtow(char *str)
 		if (str[len-1] == ' ' && str[len] != ' ')
 		{
 			row[i] = ch;
-			stray[i++] = malloc(sizeof(char) * row[i] + 1);
+			stray[i] = malloc(sizeof(char) * row[i] + 1);
 			ch = 0;
+			i++;
 		}
 	}
 	len = 0;
