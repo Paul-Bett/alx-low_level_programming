@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * strtow - Concatenate all arguements
- * @str: 
+ * @str: String Input to split
  * Return: Pointer to new string
  **/
 char **strtow(char *str)
@@ -30,9 +30,9 @@ char **strtow(char *str)
 	i = 0;
 	while (str[len++])
 	{
-		if (str[len-1] != ' ' && str[len] != ' ')
+		if (str[len - 1] != ' ' && str[len] != ' ')
 			ch++;
-		if (str[len-1] == ' ' && str[len] != ' ')
+		if (str[len - 1] == ' ' && str[len] != ' ')
 		{
 			row[i] = ch;
 			stray[i] = malloc(sizeof(char) * row[i] + 1);
