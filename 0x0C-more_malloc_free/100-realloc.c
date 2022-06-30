@@ -28,14 +28,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		while (i < old_size)
 		{
-			copy[i] = ptr[i];
+			copy[i] = ((char*)ptr)[i];
 			i++;
 		}
 		return (copy);
 	}
 	while (i < new_size)
 	{
-		copy[i] = ptr[i];
+		copy[i] = ((char*)ptr)[i];
 		i++;
 	}
 	free(ptr);
