@@ -25,7 +25,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	i = 0;
 	while (s1[i])
-		comb[i] = s1[i++];
+	{
+		comb[i] = s1[i];
+		i++;
+	}
 	for (j = 0; j < n && s2[j] != '\0'; j++)
 	{
 		comb[i] = s2[j];
