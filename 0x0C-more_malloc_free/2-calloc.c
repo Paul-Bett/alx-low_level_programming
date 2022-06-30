@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * *_calloc - call
- * @nmemb: n
- * @size: size
- * Return: 0
+ * *_calloc - function to perform calloc using malloc
+ * @nmemb: number of elements
+ * @size: size of each element
+ * Return: pointer to calloc memory
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -17,5 +17,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	for (i = 0; i < nmemb * size; i++)
 		memory[i] = 0;
-	return ((void *)memory);
+	return (memory);
 }
