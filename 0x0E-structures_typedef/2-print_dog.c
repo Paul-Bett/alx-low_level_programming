@@ -3,6 +3,7 @@
 #include <stdlib.h>
 /**
  * print_dog - Print Struct dog details
+ * @d: structure pointer
  * Regturn: Null
  **/
 void print_dog(struct dog *d)
