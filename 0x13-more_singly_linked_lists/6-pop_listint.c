@@ -13,7 +13,10 @@ int pop_listint(listint_t **head)
 	if (head == NULL)
 		return (0);
 	current = *head;
-	pop = current->n;
-	*head = current->next;
+	if (current)
+	{
+		pop = current->n;
+		*head = current->next;
+	}
 	return (pop);
 }
