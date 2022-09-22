@@ -1,12 +1,8 @@
-0x1A. C - Hash tables
+#ifndef HASH_H
+#define HASH_H
 
-Resources: https://en.wikipedia.org/wiki/Hash_table
-	   https://en.wikipedia.org/wiki/Hash_function
-	   https://www.youtube.com/watch?v=MfhjkfocRR0&list=PLTxllHdfUq4f7-uHOpxXnBUbsuLiI9pmb&index=1
-
-
-Data Structures used in this project
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -35,3 +31,9 @@ typedef struct hash_table_s
      unsigned long int size;
      hash_node_t **array;
 } hash_table_t;
+
+
+hash_table_t *hash_table_create(unsigned long int size);
+
+
+#endif
