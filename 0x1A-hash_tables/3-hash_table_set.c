@@ -9,7 +9,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *hn, *hn_current;
-	unsigned long int index = key_index((const unsigned char *)key, ht->size); 
+	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 
 	if (ht == NULL || key == NULL)
 		return (0);
@@ -32,10 +32,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(hn_current->value);
 			free(hn_current);
 			return (1);
-		}
-		while (hn_current->next != NULL && strcmp(hn_current->next->key, key) != 0)
-		{ hn_current = hn_current->next;
-		}
+		} while (hn_current->next != NULL && strcmp(hn_current->next->key, key) != 0)
+			hn_current = hn_current->next;
 		if (strcmp(hn_current->key, key) == 0)
 		{
 			hn->next = hn_current->next->next;
@@ -43,13 +41,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(hn_current->next->value);
 			free(hn_current->next);
 			hn_current->next = hn;
-		}
-		else
+		} else
 		{
 			hn->next = ht->array[index];
 			ht->array[index] = hn;
 		}
-	}
-		
-	return (1);
+	} return (1);
 }
