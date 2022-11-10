@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+''' Island_Perimeter Module
+'''
+
 def island_perimeter(grid):
     '''
         Calculates the perimeter of an island that is surrounded by water
